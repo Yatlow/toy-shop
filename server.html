@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פנייתך נשלחה</title>
+    <!-- change in each page -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/pics/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="bodycontainer">
+        <header>
+            <img class="hamburger" src="assets/pics/Hamburger.png">
+            <div class="HeadLinks">
+                <a href="index.html"><div class="headbutton">דף הבית</div></a>
+                <a href="lego.html"><div class="headbutton">לגו</div></a>
+                <a href="sonny.html"><div class="headbutton">סוני</div></a>
+                <a href="waterguns.html"><div class="headbutton">אקדחי מים</div></a>
+                <a href="inflatables.html"><div class="headbutton">מתנפחים</div></a>
+                <a href="contact-us.html"><div class="headbutton">צור קשר</div></a>
+            </div>
+            <div class="h1Box">
+                <h1>פנייתך נשלחה אלינו!</h1>
+                <!-- change in each page -->
+            </div>
+            <div class="logobox"><a href="index.html"><img src="assets/pics/logo.jpg" class="logo"></a></div>
+        </header>
+        <nav>
+           
+            <div class="navfloat">
+                <div class="navBox">
+                    <div class="navItem"><a href="lego.html">לגו</a></div>
+                    <div class="navItem"><a href="sonny.html">סוני</a></div>
+                    <div class="navItem"><a href="waterguns.html">אקדחי מים</a></div>
+                    <div class="navItem"><a href="inflatables.html">מתנפחים</a></div>
+                    <div class="navItem"><a href="sales.html">מבצעים</a></div>
+                    <div class="navItem"><a href="about.html">אודות</a></div>
+                    <div class="navItem"><a href="terms.html">תנאי השימוש</a></div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="mainbox">
+                 <div class="ServerTitle">פנייתך נשלחה אלינו!</div>
+                 <div class="MainTitle"><a href="index.html">לחץ כאן לחזרה לדף הבית!</a></div>
+                 <div class="FormResaults">
+                    <Div class="ServerSubtile">הנתונים שהזנת:</Div>
+                    <div id="results"></div>
+                </div>
+            </div>
+        </main>
+        <aside>
+            <a href="sales.html"><img src="assets/pics/30918.png" class="salePiC"></a>
+        </aside>
+        <footer>
+            <div class="footeritem"><a href="terms.html">תנאי השימוש</a></div>
+            <div class="footeritem"><a href="https://toysrus.co.il/" target="_blank">לאתר של המתחרים</a></div>
+            <div class="FooterItem"> &copy; כל הזכויות שמורות לישראל חוץ ממי שהורדתי ממנו תמונות מהרשת חחחח</div>
+        </footer>
+    </div>
+    <script>
+        // Function to get query parameters
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const pairs = queryString.split("&");
+            for (let pair of pairs) {
+                const [key, value] = pair.split("=");
+                params[decodeURIComponent(key)] = decodeURIComponent(value || "");
+            }
+            return params;
+        }
+    
+        // Display the form values
+        const params = getQueryParams();
+        const resultsDiv = document.getElementById("results");
+        const formattedMore = params.more.replace(/(\r\n|\n|\r)/g, '<br>');
+        resultsDiv.innerHTML = `
+            <div class="ServerReturn">
+                <div class="ServerReturnItem"><strong>שם משתמש:</strong> ${params.Username}</div>
+                <div class="ServerReturnItem"><strong>סיסמא:</strong> ${params.password}</div>
+                <div class="ServerReturnItem"><strong>כתובת מייל:</strong> ${params.emailAdd}</div>
+                <div class="ServerReturnItem"><strong>שם משפחה:</strong> ${params.LastName}</div>
+                <div class="ServerReturnItem"><strong>שם פרטי:</strong> ${params.FirstName}</div>
+                <div class="ServerReturnItem"><strong>צעצוע מועדף:</strong> ${params.toyType}</div>
+                <div class="ServerReturnItem"><strong>ספר לנו עוד:</strong> ${formattedMore}</div>
+            </div>
+        `;
+    </script>
+</body>
+</html>

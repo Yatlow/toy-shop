@@ -1,0 +1,488 @@
+
+@font-face {
+    font-family: Headers;
+    src: url(assets/fonts/FbRotonda-Bold.otf);
+}
+@font-face {
+    font-family: Discount;
+    src: url(assets/fonts/GarageBrush-Regular.ttf);
+}
+@font-face {
+    font-family: Cont;
+    src: url(assets/fonts/almoni-dl-aaa-700.ttf);
+}
+@font-face {
+    font-family: Titles;
+    src: url(assets/fonts/almoni-dl-aaa-900.ttf);
+}
+@keyframes blink {
+    0%, 100%{transform: scale(1);}
+    50% {transform: scale(1.2);}
+  }
+@keyframes textblink {
+0%, 100%{font-size: 2vw;}
+50% {font-size: 2.5vw;}
+}
+@keyframes inflatenav{
+    100%{color: rgb(116, 1, 96);}
+}
+@keyframes flyin {
+    0%{transform: translate(-100vw); opacity: 0;}
+    100%{transform: translate(0); opacity: 1;}
+}
+html,body{
+    direction: rtl !important;
+    color:rgb(0, 48, 0);
+    font-family: Cont;
+    margin: 0;
+    height: 100%;
+    background-image:linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.15)),  url(assets/pics/seamless-pattern-kids-toys-baby-background-vector-illustration_87543-7101.avif);
+}
+#HomeGalleryIframeID, #HomeGalleryIframeID body{
+    background:none;
+
+}
+div{
+    box-sizing: border-box;
+}
+.bodycontainer{
+    opacity: 1;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 15% 83% 2%;
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0;
+    height: 100%;
+    background: transparent;
+}
+header,nav,main,aside,footer{
+    box-sizing: border-box;
+    margin: 0;
+}
+header,footer{
+    grid-column: span 3;
+}
+header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: sticky !important;
+    top: 0;
+    padding-left: 1%;
+    padding-right: 0.5%;
+    background-image:linear-gradient(rgb(172, 199, 224 , 1),rgb(172, 199, 224 , 1), rgb(172, 199, 224 , 0.7));
+    font-family: Headers;
+    min-height: 7vw;
+    z-index: 10;
+}
+.hamburger{
+    width: 90%; 
+    height: auto;
+}
+.HeadLinks{
+    display: inline-flex;
+    gap: 12px;
+    padding-right: 5px;
+    align-items: center;
+}
+.headbutton{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    padding: 0.4vw;
+}
+.HeadLinks>a{
+    min-width: fit-content;
+    color: inherit;
+    text-decoration: none;
+}
+.headbutton:hover{
+    animation: inflatenav 1s 1 forwards;
+    border-bottom: solid 0.75vh;
+    transform: scale(1.2);
+}
+.h1Box{
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 30px;
+}
+h1{
+    animation:  textblink 3s infinite, flyin 2s 1;
+    text-align: justify;
+    text-shadow: 0.15vw 0.3vh rgb(0, 80, 0);
+    font-size: 25px;
+}
+.logobox{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 2vw;
+    top: 0.25vw;
+}
+.logo{
+    width: 100%;
+    height: auto;
+    border-radius: 150px;
+}
+.logo:hover{
+    transform: scale(1.2);
+}
+.navfloat{
+    position: absolute;
+    width: 15%;
+}
+.navBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vw;
+    font-family: Headers;
+}
+.navItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75vh;
+    box-sizing: border-box;
+    margin-right: 1vw;
+    padding-right: 1.25vw;
+    padding-left: 1.25vw;
+    margin-bottom: 0.65vh;
+    width: 100%;
+}
+.navItem a{
+    white-space: nowrap;          /* Prevent text from wrapping to a new line */
+    overflow: visible;             /* Hide overflowed text */
+    /* text-overflow: ellipsis;      Add ellipsis (...) if text overflows */
+    font-size: 30px;
+    text-decoration: none;
+    color: inherit;
+}
+.navItem:hover{
+    animation: inflatenav 1.5s 1 forwards;
+    border-bottom: solid 0.75vh;
+    transform: scale(1.2);
+}
+.hamburger:hover{
+   transform: scale(1.3);
+}
+.mainbox{
+    min-height: 74.14vh;
+    height: fit-content;
+    font-size: 3vh;
+}
+.MainTitle {
+    font-size: 7vh;
+    margin: 5vh 5vw 5vh 5vw ;
+    font-family: Titles;
+    max-width: fit-content;
+    text-shadow: 0.15vw 0.3vh rgb(0, 80, 0);
+}
+.ServerTitle {
+    font-size: 7vh;
+    font-family: Titles;
+    max-width: fit-content;
+}
+.MainTitle a{
+    text-decoration: none;
+    color: inherit;
+}
+.MainTitle:hover, .HomeAbotTitle :hover{
+    color: rgb(116, 1, 96);
+    text-shadow: 0.3vh 0.3vh rgb(116, 80, 96);
+}
+.MainSubtile{
+    margin: 5vh;
+}
+.ServerSubtile{
+    margin-right: 5vh;
+    font-size: 5vh;
+}
+#HomeGalleryIframeHTML, #HomeGalleryIframebody{
+    background: none;
+}
+.HomeGalleryIframe{
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 23vw;
+    border: none;
+}
+.carousel-inner{
+    margin-top: 3vw;
+}
+.carobox{
+    display: flex;
+    justify-content: center;
+}
+.carobox> img{
+    height: 20vw;
+    max-width: 20%;
+    object-fit: fill;
+    border-radius: 15px;
+    margin: 2vh;
+
+}
+.carousel-control-prev{
+    transform: translateX(-15vh);
+    opacity: 60%;
+}
+.carousel-control-next{
+    transform: translateX(15vh);
+    opacity: 60%;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6vh;
+    background-image: none;
+}
+.carousel-control-next-icon:after{
+  content: '<';
+  font-size: 15vh;
+  justify-content: center;
+  color: rgb(0, 48, 0);
+}
+.carousel-control-prev-icon:after {
+  content: '>';
+  font-size: 15vh;
+  color:rgb(0, 48, 0);
+}
+.GallartTitle{
+    font-family: Titles;
+    font-size: 4vw;
+    margin: 5vw;
+}
+.HomeGallery{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(7,1fr);
+}
+.SalesGallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 3vh 1vh 10vh 0;
+}
+.SalesGalleryItem a{
+    text-decoration: none;
+}
+.tag{
+    width: 9vw;
+    display: flex;
+    transform: translate(-15vw, -17vw);
+    opacity: 0.7;
+}
+.percenteg{
+    font-family: Discount;
+    font-size: 2vw;
+    color: rgb(172, 199, 224) ;
+    transform: translate(-17vw, -18.5vw) rotate(-45deg);
+}
+.PageGallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row: auto;
+    margin-bottom: 2vw;
+    min-height: fit-content;
+}
+.galleryItem, .SalesGalleryItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SalesGalleryItem{
+    justify-content: start;
+    align-items: start;
+    overflow: hidden;
+    width: 26vw;
+    height: 20vw;
+    padding: 1vw;
+}
+.HomeGallery img,.saleIMG{
+    width: 17vw;
+    height: 17vw;
+    object-fit: cover;
+    margin: 0.7vw;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.HomeGallery img:hover, .SalesGalleryItem:hover{
+    transform: scale(1.1);
+}
+.PageGallery img{
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+    margin: 2vw;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.PageGallery img:hover{
+    transform: scale(1.2);
+}
+.HomeAbotTitle{
+    font-family: Titles;
+    font-size: 2vw;
+    margin:2vw ;
+}
+.HomeAbotTitle a{
+    text-decoration: none;
+    color: inherit;
+}
+.HomeAbotText{
+    margin: 2vw;
+    line-height: 3.5vh;
+}
+.TermsText{
+    margin: 5vh;
+    font-size: 2.5vh;
+    line-height: 3.2vh;
+}
+.formBox{
+    margin: 5vh;
+    padding: 5vh;
+    margin-top: 3vh;
+    width: 70vw;
+    font-size: 2.5vh;
+}
+.inputLine{
+    margin-bottom: 1rem;
+    display: flex;
+    max-width: 70vw;
+    object-fit: contain;
+    flex-wrap: wrap;
+}
+.inputLable{
+    padding: 0.5rem;
+    background-image:linear-gradient(rgb(172, 199, 224 , 1),rgb(172, 199, 224 , 1), rgb(172, 199, 224 , 0.7));
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-overflow: clip;
+    border-radius: 0 1rem 1rem 0;
+    width: 8vw;
+}
+.InputText{
+    box-sizing: border-box;
+    padding: 0.5rem;
+    flex: 1;
+    border: 0.05rem rgb(172, 199, 224) solid; 
+    border-radius: 1rem 0 0 1rem;
+}
+#Finame,#FamilyTag{
+    border-radius: 0;
+}
+.InputText:focus{
+    outline: 0.3rem rgb(172, 199, 300, 0.7) solid;
+    border: none;
+}
+.selectBox{
+    margin-bottom: 3vh;
+}
+.moreBox{
+    color: grey;
+    resize: none;
+    height: 6rem;
+}
+#toyType option:checked{
+    background-color: rgb(172, 199, 224,0.95) !important; 
+}
+.btnBox{
+    margin-top: 6vh;
+    display: flex;
+    justify-content: center;
+}
+.form-btn{
+    width: 20vh;
+    background-color: rgb(172, 199, 224,0.8);
+    border: none;
+    padding: 1.5vh;
+    border-radius: 2vh;
+}
+.form-btn:hover, .form-btn:focus {
+    transform: scale(1.2);
+    background-color: rgb(172, 199, 224,1);
+    color: rgb(116, 1, 96);
+    outline: 0.3rem rgb(172, 199, 300, 0.7) solid;
+}
+.FormResaults{
+    background-image:linear-gradient(rgb(172, 199, 224 , 1),rgb(172, 199, 224 , 0.8), rgb(172, 199, 224 , 0.7));
+    width: fit-content;
+    margin:  0 5vh 0 0;
+    padding: 4vh;
+    border-radius: 5vh 0 5vh 0 ;
+}
+.ServerReturn{
+    margin: 3vh;
+    list-style-type: none;
+}
+.ServerReturn li{
+    margin-bottom: 0.6rem;
+}
+.ServerReturnItem strong{
+    font-family: Headers;
+}
+aside{
+    direction: ltr;
+}
+.salePiC{
+    width: 12%;
+    position: absolute;
+    bottom:16vh;
+    animation: 3s infinite blink;
+    margin-left: 1.5vw;   
+}
+.salePiC:hover{
+    animation: blink 0.5s infinite;
+    width: 14%;
+}
+footer{
+    height: 10vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    background-color: rgb(172, 199, 224);
+    z-index: 10;
+}
+footer a{
+    color: inherit;
+    text-shadow: 0.25vh 0.25vh rgb(0, 80, 0);
+}
+footer a:hover{
+    color: rgb(58, 45, 4);
+}
+@media (max-width: 1100px) {/* Large screens */
+    .headbutton {
+        font-size: 25px; 
+    }
+}
+@media (max-width: 950px) {/* Large screens */
+    .headbutton {
+        font-size: 20px; 
+    }
+}
+@media (max-width: 800px) {/* Medium screens */
+    .headbutton, .navItem a {
+        font-size: 15px; 
+    }
+}
+@media (max-width: 650px) {/*small screens */
+    .headbutton, .navItem a {
+        font-size: 12px; 
+    }
+}
+@media (max-width: 576px) {/* Extra small screens */
+    .headbutton, .navItem a {
+        font-size: 10px; 
+    }
+}
